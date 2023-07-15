@@ -33,24 +33,24 @@ def plot_dist(start=None, show=True):
     ax2 = ax1.twinx()
 
     ax1.hist(df['upload_mbps'],
-        label="Up",
+        label="Upload",
         bins=bins_list,
         color=COLORS['up'],
         alpha=0.3
     )
     ax1.hist(df['download_mbps'],
-        label="Down",
+        label="Download",
         bins=bins_list,
         color=COLORS['down'],
         alpha=0.3
     )
     ax2.plot(bins_list, kde_up(bins_list),
-        label="Up",
+        label="Upload",
         color=COLORS['up'],
         alpha=0.8
     )
     ax2.plot(bins_list, kde_down(bins_list),
-        label="Down",
+        label="Download",
         color=COLORS['down'],
         alpha=0.8
     )
@@ -58,7 +58,7 @@ def plot_dist(start=None, show=True):
     # ax2.legend(loc='upper right')
     ax2.legend()
 
-    ax1.set_title("Hotel Bandwidth")
+    ax1.set_title("Hotel Internet Speed (July 2022–June 2023)")
     ax1.set_xlabel("Mbps")
     ax1.set_ylabel("Frequency")
     ax2.set_ylabel("Probability Density")
