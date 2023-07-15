@@ -3,10 +3,10 @@ from datetime import datetime, timezone
 import pandas as pd
 import math
 from scipy.stats import gaussian_kde
-
-import matplotlib
-matplotlib.use("Agg") # Make matplotlib not trigger rocketship icon
+# import matplotlib
 import matplotlib.pyplot as plt
+
+# matplotlib.use("Agg") # Make matplotlib not trigger rocketship icon on MacOS
 
 RESULTS_FILE = "results.csv"
 IMAGE_FILE = "hotel-bandwidth.png"
